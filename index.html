@@ -14,10 +14,18 @@
         <h2>Vacation Contest Sign-Up Form</h2>
         <form method="GET" action="results.html">
             <div>
-                <label for="firstname">Your First Name</label>
-                <input type="text" id="firstname" name="firstname">
-                <label for="lastname">Your Last Name</label>
-                <input type="text" id="lastname" name="lastname">
+                <label for="firstname" >Your First Name</label>
+                <span class="required-field">*</span>
+                <input type="text" id="firstname" name="firstname" required minlength="2" maxlength="35">
+                <label for="lastname">Your Last Name </label>
+                <span class="required-field">*</span>
+                <input type="text" id="lastname" name="lastname" required minlength="2" maxlength="35">
+                <label for="age">Your Age </label><span class="required-field">*</span>
+                <input type="number" id="age" name="age" min="21" max="121" required>
+                <label for="secret-code"> Your Secret Code</label>
+                <span class="required-field">*</span>
+                <input type="password" id="secret-code" pattern="[A-Za-z0-9]{6}" required maxlength="6" title="6 Alphanumeric Character Passcode">
+                <h5>One must be age 21 or older to enter the contest</h5>
             </div>
             <fieldset>
                 <legend>Your Contact Info</legend>
@@ -86,7 +94,7 @@
                         <option value="WY">Wyoming</option>
                     </datalist>
                     <label for="zip">Your Zipcode</label>
-                    <input type="text" id="zip" name="zip">
+                    <input type="text" id="zip" name="zip" pattern="[0-9]{5}" title="5-Digit US ZIP Code">
                 </div>
             </fieldset>
 
